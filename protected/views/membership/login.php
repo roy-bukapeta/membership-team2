@@ -6,43 +6,37 @@
 		<div class="form-wrapper register" style="margin-top: -150px;">
 			<form action="<?php echo $this->uri_path_for('membership-login'); ?>" method="post" novalidate>
 
-				<?php
-				echo $this->insert('sections::flash-message');
-				?>
+				<?php echo $this->insert('sections::flash-message');?>
 
 				<h3 class="aligncenter"> <span> <i class="fa fa-user"></i></span> Login Anggota</h3>
 
-				<table style="width: 80%; margin: 0 auto;">
-                    <tbody>
-                        <tr>
-                            <th style="width: 200px;">
-                                <label style="font-weight: bold;">Username / Email</label>
-                            </th>
-                            <td>
-                                <input id="username" class="input_full" name="username" required="required" type="text" style="font-size: 15px;" />
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <th style="width: 200px;">
-                                <label style="font-weight: bold;">Password</label>
-                            </th>
-                            <td>
-                                <input id="password" class="input_full" name="password" required="required" type="password" style="font-size: 15px;" />
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <th>
-                                &nbsp;
-                            </th>
-                            <td>
-                                <input value="Login" class="button" type="submit" />
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="username" class="control-label">Username / Email</label>
+                            <input type="username" id="username" name="username" class="form-control" value="<?php echo $this->fh_default_val('email'); ?>" />
+                            <p class="help-block">
+                                <?php echo $this->fh_show_errors('username', $_view_validation_errors_); ?>
+                                Masukkan username.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="password" class="control-label">Password</label>
+                            <input type="password" id="password" name="password" class="form-control" value="<?php echo $this->fh_default_val('email'); ?>" />
+                            <p class="help-block">
+                                <?php echo $this->fh_show_errors('password', $_view_validation_errors_); ?>
+                                Masukkan password.
+                            </p>
+                        </div>
+                    </div>
+                    <tr>
+                        <td>
+                            <input value="Login" class="button" type="submit" />
+                        </td>
+                    </tr>
+                </div>
 			</form>
 		</div>
 	</div>
