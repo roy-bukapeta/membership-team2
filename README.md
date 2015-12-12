@@ -14,7 +14,7 @@ Cara Install:
 4. Copy file `settings.php.disable` lalu rename hasil copy nya menjadi bernama `settings.php`. File `settings.php.disable` jangan dihapus atau di-rename.
 5. Edit nilai-nilai di settings.php sesuai kebutuhan.
 6. Buat direktori `files/photoprofile` di dalam direktori `public/` .
-7. Akses app dengan alamat berikut: `http://localhost/phpindonesia.or.id-membership2/apps/membership`
+7. Akses app dengan alamat berikut: `http://localhost/membership-team2/apps/membership`
 
 Jika app ini diinstall di virtual host, maka akses dengan alamat: `http://virtual.host.anda/apps/membership` 
 
